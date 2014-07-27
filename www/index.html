@@ -31,7 +31,7 @@
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>UIB+PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
@@ -41,6 +41,7 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+            
         </script>
         
         
@@ -53,6 +54,12 @@
 				,uProjectApiPass: 'ec4cfa1ff9680d8fafb546ea54ef8cf2'
 				,uPort: 57909
 		});
+    test = function (){
+      document.getElementById('deviceready').children[0].innerHTML = uDash.getStatus();
+      setTimeout(test,1000); 
+    }
+    
+    setTimeout(test,1000);
 </script>
 
     </body>
